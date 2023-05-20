@@ -1,0 +1,24 @@
+const Tesseract = require('tesseract.js');
+
+// Ruta de la imagen escaneada
+const imagePath = 'ruta/de/la/imagen.jpg';
+
+// Función para realizar la conversión de OCR
+async function convertirOCR(imagePath) {
+  try {
+    const result = await Tesseract.recognize(imagePath, 'eng', {
+      // Opciones de configuración
+      // Puedes ajustar estas opciones según tus necesidades
+      tessedit_char_whitelist: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789',
+    });
+
+    // Obtener el texto extraído
+    const textoExtraido = result.data.text;
+    console.log(textoExtraido);
+  } catch (error) {
+    console.error('Error al realizar OCR:', error);
+  }
+}
+
+// Llamar a la función de conversión
+convertirOCR(imagePath);
