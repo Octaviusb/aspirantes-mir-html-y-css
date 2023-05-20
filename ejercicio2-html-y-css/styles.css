@@ -5,6 +5,7 @@
     border: 1px solid #ccc;
     border-radius: 20px;
     background: linear-gradient(#bd09b7, #6b4cf5);
+    box-shadow: 0 10px 10px rgba(7, 7, 7, 0.2);
   }
   
   h1 {
