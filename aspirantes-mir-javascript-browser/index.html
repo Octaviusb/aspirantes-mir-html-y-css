@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Texto en Mayúsculas</title>
+  <script>
+    function mostrarTextoEnMayusculas() {
+      var input = document.getElementById('inputTexto');
+      var resultado = document.getElementById('resultado');
+
+      // Obtener el valor del input y convertirlo a mayúsculas
+      var texto = input.value.toUpperCase();
+
+      // Mostrar el texto en el párrafo
+      resultado.textContent = texto;
+    }
+  </script>
+</head>
+<body>
+  <h1>Texto en Mayúsculas</h1>
+
+  <label for="inputTexto">Ingrese un texto:</label>
+  <input type="text" id="inputTexto" oninput="mostrarTextoEnMayusculas()">
+
+  <p id="resultado"></p>
+</body>
+</html>

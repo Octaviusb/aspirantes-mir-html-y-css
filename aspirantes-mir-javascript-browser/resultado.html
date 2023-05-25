@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Verificador de Palíndromos</title>
+  <script>
+    function verificarPalindromo() {
+      var input = document.getElementById('inputPalabra').value;
+      var resultado = document.getElementById('resultado');
+      var inputPalabra = document.getElementById('inputPalabra');
+
+      // Eliminar espacios y convertir a minúsculas
+      var palabra = input.toLowerCase().replace(/\s/g, '');
+
+      // Verificar si es palíndromo
+      var esPalindromo = palabra === palabra.split('').reverse().join('');
+
+      // Mostrar el resultado
+      if (input === '') {
+        resultado.textContent = '';
+      } else if (esPalindromo) {
+        resultado.textContent = 'La palabra/frase es un palíndromo.';
+      } else {
+        resultado.textContent = 'La palabra/frase no es un palíndromo.';
+      }
+
+      // Limpiar el contenido del input
+      inputPalabra.value = '';
+    }
+  </script>
+</head>
+<body>
+  <h1>Verificador de Palíndromos</h1>
+
+  <label for="inputPalabra">Ingrese una palabra o frase:</label>
+  <input type="text" id="inputPalabra">
+
+  <button onclick="verificarPalindromo()">Verificar</button>
+
+  <p id="resultado"></p>
+</body>
+</html>
