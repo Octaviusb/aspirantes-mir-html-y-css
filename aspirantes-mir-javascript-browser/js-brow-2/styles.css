@@ -1,0 +1,38 @@
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background: #f2ecf2;
+    box-shadow: 0 10px 10px rgba(7, 7, 7, 0.2);
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+  h2 {
+    text-align: center;
+    font-family: sans-serif;
+  }
+
+    .task-list {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .task-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .task-item.completed span {
+      text-decoration: line-through;
+    }
+
+    .delete-button {
+      margin-left: 10px;
+    }
