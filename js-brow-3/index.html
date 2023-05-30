@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Local Storage</title>
+  </head>
+  <body>
+    <h1>Ejercicio de LocalStorage</h1>
+
+    <div class="container">
+      <form id="userDataForm">
+        <label for="nameInput">Ingresa tu nombre:</label>
+        <input type="text" id="nameInput" required>
+        <br>
+        <label for="emailInput">Ingresa tu correo electrónico:</label>
+        <input type="email" id="emailInput" required>
+        <br>
+        <button type="submit">Guardar</button>
+      </form>
+    </div>
+  
+    <section id="userDataSection">
+      <h2>Datos Guardados:</h2>
+      <ul id="nameList"></ul>
+      <div id="emailDisplay"></div>
+      <button id="deleteButton">Eliminar</button>
+    </section>
+  
+    <script src="index.js"></script>
+  </body>
+</html>
